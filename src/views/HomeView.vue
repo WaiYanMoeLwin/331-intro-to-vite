@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import EventCard from '@/components/EventCard.vue';
+import EventCategoryAndOrganizer from '@/components/EventCategoryAndOrganizer.vue';
 import type { Event } from '@/types';
 import { ref } from 'vue';
 const events = ref<Event[]>([
@@ -40,7 +41,23 @@ const events = ref<Event[]>([
 </script>
 
 <template>
-  <div class="home">
+  <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
+  <div class="event-category-and-organizers">
+    <EventCategoryAndOrganizer v-for="event in events" :key="event.id" :event="event" />
+  </div>
 </template>
+
+<style scoped>
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event-category-and-organizers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+</style>
