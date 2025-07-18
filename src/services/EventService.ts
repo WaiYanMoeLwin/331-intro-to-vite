@@ -2,6 +2,7 @@ import axios from "axios";
 
 const apiClient = axios.create({
     baseURL: 'https://my-json-server.typicode.com/WaiYanMoeLwin/331-lab-2-db',
+    // baseURL: 'http://localhost:3000/',
     withCredentials: false,
     headers: {
         Accept: 'application/json',
@@ -13,7 +14,7 @@ export default {
     getEvents(perPage: Number, page: Number) {
         return apiClient.get('/events?_limit=' + perPage + '&_page=' + page);
     },
-    getEvent(id: String) {
+    getEvent(id: number) {
         return apiClient.get('/events/' + id);
     }
 }
