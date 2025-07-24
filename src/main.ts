@@ -3,6 +3,7 @@
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 
+import 'nprogress/nprogress.css'
 import App from './App.vue'
 import router from './router'
 
