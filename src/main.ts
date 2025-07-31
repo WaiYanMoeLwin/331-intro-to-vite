@@ -2,6 +2,7 @@
 
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
+import './assets/style.css'
 
 import 'nprogress/nprogress.css'
 import App from './App.vue'
