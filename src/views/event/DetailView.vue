@@ -13,7 +13,7 @@ const { message } = storeToRefs(store);
 </script>
 
 <template>
-    <div id="flashMessage" v-if="message.includes('update')">
+    <div class="animate-fade" v-if="message.includes('update')">
         <h4>{{ message }}</h4>
     </div>
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>

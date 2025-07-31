@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useMessageStore } from '@/stores/message';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView } from 'vue-router';
 const store = useMessageStore();
@@ -8,7 +7,6 @@ const { message } = storeToRefs(store);
 </script>
 
 <template>
-  <SpeedInsights />
   <div class="text-center font-sans text-gray-700 antialiased">
     <header>
       <div class="animate-fade" v-if="message.includes('register')">
