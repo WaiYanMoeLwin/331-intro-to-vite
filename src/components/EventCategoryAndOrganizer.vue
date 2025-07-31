@@ -7,15 +7,15 @@ defineProps<{
 
 <template>
     <div class="event-category-and-organizer">
-        <div class="category-and-organizer-card">
-            <p>Category: {{ event.category }}</p>
-            <p>Organizer: {{ event.organizer }}</p>
+        <div class="p-[20px] w-[250px] cursor-pointer border mb-[18px] border-gray-700 hover:scale-101 hover:shadow-sp">
+            <p class="text-right">Category: {{ event.category }}</p>
+            <p class="text-right">Organizer: {{ event.organizer }}</p>
         </div>
     </div>
 </template>
 
 <style scoped>
-.event-category-and-organizer {
+/* .event-category-and-organizer {
     padding: 20px;
     width: 250px;
     cursor: pointer;
@@ -28,5 +28,5 @@ defineProps<{
 }
 p {
     text-align: right;
-}
+} */
 </style>
